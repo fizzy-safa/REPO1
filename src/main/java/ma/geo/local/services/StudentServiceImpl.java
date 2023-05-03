@@ -49,7 +49,7 @@ public class StudentServiceImpl implements StudentService {
     public List<StudentDTO> selectAll() {
         LOGGER.debug("start method select All");
         List<StudentEntity> se=studentRepository.findAll();
-        List<StudentDTO> sd=studentMapper.studentEntiesToDtos(se);
+        List<StudentDTO> sd=studentMapper.studentEntitiesToDos(se);
         return sd;
 
     }

@@ -2,37 +2,24 @@ package ma.geo.local.mappers;
 
 import ma.geo.local.entities.StudentEntity;
 import ma.geo.local.models.StudentDTO;
-import org.springframework.stereotype.Component;
+import ma.geo.local.entities.StudentId;
+import ma.geo.local.models.StudentIdDTO;
 
-import java.util.ArrayList;
+import org.mapstruct.Mapper;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
-@Component(value = "mapper1")
-public class StudentMapper {
+//@Component(value = "mapper1")
+@Mapper
+public interface  StudentMapper {
 
-    public StudentEntity studentDtoToEntity(StudentDTO dto) {
-        //StudentEntity studentEntity = new StudentEntity();
-        //studentEntity.setId(dto.getId());
-        //studentEntity.setName(dto.getName());
-        //return studentEntity;
-        return null;
-    }
 
-    public StudentDTO studentEntityToDto(StudentEntity studentEntity) {
-      //  StudentDTO dto = new StudentDTO();
-        //dto.setId(studentEntity.getId());
-        //dto.setName(studentEntity.getName());
-        //return dto;
-        return null;
-    }
+   // StudentEntity studentDtoToEntity(StudentDTO dto);
+   // StudentDTO studentEntityToDto(StudentEntity studentEntity);
+   // List<StudentDTO> studentEntitiesToDtos(List<StudentEntity> studentEntities) ;
 
-    public List<StudentDTO> studentEntiesToDtos(List<StudentEntity> studentEntities) {
-            //if(studentEntities!=null&&!studentEntities.isEmpty()){
-            //return studentEntities.stream().map(studentEntity -> studentEntityToDto(studentEntity)).collect(Collectors.toList());
-       // }else {
-         //   return new ArrayList<>();
-        //}
-        return null;
-    }
+    StudentEntity studentDtoToEntity(StudentDTO dto);
+    StudentDTO studentEntityToDto(StudentEntity studentEntity) ;
+    List<StudentDTO> studentEntitiesToDos(List<StudentEntity> studentEntities) ;
+    StudentId studentIdDTOToStudentId(StudentIdDTO studentIdDTO);
 }
