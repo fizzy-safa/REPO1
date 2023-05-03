@@ -1,15 +1,16 @@
 package ma.geo.local.services;
 
+import ma.geo.local.entities.StudentEntity;
 import ma.geo.local.models.StudentDTO;
 
 import java.util.List;
 
 public interface StudentService {
-    Long save(StudentDTO s);
+    long save(StudentDTO s);
 
-    Long update(StudentDTO s);
+    long update(StudentDTO s);
 
-    Boolean delete(Long id);
+    Boolean deletebyId(Long id);
 
     List<StudentDTO> selectAll();
 }

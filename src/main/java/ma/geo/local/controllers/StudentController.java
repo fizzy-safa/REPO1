@@ -23,9 +23,8 @@ public class StudentController {
     }
 
     @PostMapping
-    @RequestBody
-    public Long save(StudentDTO dto) {
-        LOGGER.debug("start method save");
+    public Long save( @RequestBody StudentDTO dto) {
+        LOGGER.debug("start method save",dto);
         return studentService.save(dto);
     }
 
@@ -33,15 +32,16 @@ public class StudentController {
     @RequestBody
 
     public Long update(StudentDTO dto) {
-        LOGGER.debug("start method update");
+        LOGGER.debug("start method update",dto);
         return studentService.update(dto);
     }
 
 
 
-    public Boolean delete(Long id) {
-        LOGGER.debug("start method delete");
-        return studentService.delete(id);
+    @DeleteMapping("/{id}")
+    public Boolean delete(@PathVariable("ids") Long id) {
+        LOGGER.debug("start method delete",id);
+        return studentService.deletebyId(id);
     }
 
     @GetMapping

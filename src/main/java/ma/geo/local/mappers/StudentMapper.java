@@ -12,24 +12,27 @@ import java.util.stream.Collectors;
 public class StudentMapper {
 
     public StudentEntity studentDtoToEntity(StudentDTO dto) {
-        StudentEntity studentEntity = new StudentEntity();
-        studentEntity.setId(dto.getId());
-        studentEntity.setName(dto.getName());
-        return studentEntity;
+        //StudentEntity studentEntity = new StudentEntity();
+        //studentEntity.setId(dto.getId());
+        //studentEntity.setName(dto.getName());
+        //return studentEntity;
+        return null;
     }
 
     public StudentDTO studentEntityToDto(StudentEntity studentEntity) {
-        StudentDTO dto = new StudentDTO();
-        dto.setId(studentEntity.getId());
-        dto.setName(studentEntity.getName());
-        return dto;
+      //  StudentDTO dto = new StudentDTO();
+        //dto.setId(studentEntity.getId());
+        //dto.setName(studentEntity.getName());
+        //return dto;
+        return null;
     }
 
     public List<StudentDTO> studentEntiesToDtos(List<StudentEntity> studentEntities) {
-        if(studentEntities!=null&&!studentEntities.isEmpty()){
-            return studentEntities.stream().map(studentEntity -> studentEntityToDto(studentEntity)).collect(Collectors.toList());
-        }else {
-            return new ArrayList<>();
-        }
+            //if(studentEntities!=null&&!studentEntities.isEmpty()){
+            //return studentEntities.stream().map(studentEntity -> studentEntityToDto(studentEntity)).collect(Collectors.toList());
+       // }else {
+         //   return new ArrayList<>();
+        //}
+        return null;
     }
 }

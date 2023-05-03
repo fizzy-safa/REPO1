@@ -1,11 +1,13 @@
 package ma.geo.local.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+        //@Inheritance(strategy =InheritanceType.JOINED)
+@Table(name="T_Students")
+@DiscriminatorColumn(name = "Type")
 public class StudentEntity {
     @Id
     @Column(name = "id_student")
